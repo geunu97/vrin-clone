@@ -6,7 +6,7 @@
   left: 0px;
   z-index: 999;
   background: rgba(0, 0, 0, 0.5);
-  .header__inner {
+  &__inner {
     padding: 0px 80px;
     height: 100%;
     display: flex;
@@ -15,7 +15,7 @@
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
-    .header__menu {
+    &__menu {
       display: flex;
       flex-direction: row;
       -webkit-box-align: center;
@@ -34,23 +34,23 @@
         &:hover {
           opacity: 0.8;
         }
-        &.header__menu__login a {
-          color: rgb(110, 133, 252);
-        }
-        &.header__menu__start a {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          padding: 12px 20px;
-          border-radius: 4px;
-          color: rgb(255, 255, 255);
-          background-color: rgb(55, 55, 204);
-          font-size: 1.6rem;
-          font-weight: 400;
-          line-height: 140%;
-          letter-spacing: 0px;
-        }
+      }
+      &__login a {
+        color: rgb(110, 133, 252);
+      }
+      &__start a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(55, 55, 204);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0px;
       }
     }
   }
