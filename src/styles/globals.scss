@@ -3,14 +3,133 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   word-break: keep-all;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  font-size: 62.5%;
+  font-weight: 500;
+  font-style: normal;
+  font-family: 'Pretendard Variable', 'Pretendard', 'Noto Sans KR', helvetica, 'Apple SD Gothic Neo', 'NanumBarunGothic', sans-serif;
+  line-height: normal;
+  white-space: nowrap;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
-  display: block;
-  color: #000;
   text-decoration: none;
+  color: inherit;
+  -webkit-user-drag: none;
+  width: fit-content;
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+img,
+svg,
+i {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 ul {
@@ -18,30 +137,11 @@ ul {
 }
 
 button {
+  text-transform: unset !important;
+  background: none;
   cursor: pointer;
-}
-
-strong {
-  font-weight: 500;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 500;
-}
-
-table {
-  width: 100%;
-  padding: 0;
-  border-spacing: 0;
   border: 0;
-  border-collapse: collapse;
-}
-
-body {
-  font-family: 'Pretendard', 'Noto Sans KR', helvetica, 'Apple SD Gothic Neo', 'NanumBarunGothic', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  border-radius: none;
+  color: inherit;
+  font: inherit;
 }
