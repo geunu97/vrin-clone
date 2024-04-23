@@ -1,0 +1,50 @@
+.home {
+  &__section0 {
+    background-color: rgb(5, 7, 14);
+    background-image: url('../assets/images/home_A-1_PC-24bf28eb.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    &__content {
+      position: relative;
+      max-width: 1300px;
+      width: calc(100% - 180px);
+      height: 100vh;
+      max-height: 970px;
+      z-index: 1;
+      white-space: pre-wrap;
+      margin: 0 auto;
+      &__text {
+        position: absolute;
+        left: 0px;
+        bottom: 120px;
+        z-index: 2;
+        &__title {
+          color: rgb(230, 232, 235);
+          font-size: 5.2rem;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 12px;
+        }
+        &__description {
+          color: rgb(189, 193, 199);
+          font-size: 3.2rem;
+          font-weight: 400;
+          line-height: 140%;
+        }
+        &__button {
+          width: 326px;
+          padding: 16px;
+          margin-top: 56px;
+          border-radius: 6px;
+          background-color: rgb(55, 55, 204);
+          color: rgb(255, 255, 255);
+          font-size: 2.4rem;
+          font-weight: 600;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+}
