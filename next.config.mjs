@@ -2,7 +2,7 @@
 
 const nextConfig = {
   sassOptions: {
-    prependData: "@import 'src/styles/variables.scss';",
+    // prependData: "@import 'src/styles/variables.scss';",
   },
 };
 
