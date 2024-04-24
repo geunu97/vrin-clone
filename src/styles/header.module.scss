@@ -23,20 +23,87 @@
       gap: 60px;
       margin-left: 20px;
       li {
-        color: white;
         font-size: 1.8rem;
         font-weight: 600;
         cursor: pointer;
         a {
-          color: white;
           text-decoration: none;
         }
+      }
+      &__price a {
+        color: rgb(255, 255, 255);
         &:hover {
-          opacity: 0.8;
+          color: rgb(111, 117, 123);
+        }
+      }
+      &__language {
+        width: 80px;
+        height: 100%;
+        position: relative;
+        color: rgb(230, 232, 235);
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0px;
+        &__button {
+          width: 90px;
+          height: 32px;
+          color: rgb(255, 255, 255);
+          font-size: 1.8rem;
+          font-weight: 600;
+          line-height: 140%;
+          letter-spacing: 0px;
+        }
+        &__arrow {
+          position: absolute;
+          top: 4px;
+          right: -12px;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        &__modal {
+          position: absolute;
+          top: 40px;
+          left: 60%;
+          transform: translate(-50%);
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 138px;
+          background-color: rgb(40, 45, 50);
+          padding: 8px 0px;
+          overflow-y: auto;
+          border-radius: 4px;
+          z-index: 1;
+          font-size: 1.4rem;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 0px;
+          li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 20px;
+            width: 100%;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            button {
+              // color: rgb(110, 133, 252);
+              color: rgb(255, 255, 255);
+              font-size: 1.4rem;
+              font-weight: 500;
+              line-height: 140%;
+              letter-spacing: 0px;
+            }
+          }
         }
       }
       &__login a {
         color: rgb(110, 133, 252);
+        &:hover {
+          color: rgb(93, 108, 250);
+        }
       }
       &__start a {
         display: flex;
@@ -51,6 +118,9 @@
         font-weight: 400;
         line-height: 140%;
         letter-spacing: 0px;
+        &:hover {
+          background-color: rgb(93, 108, 250);
+        }
       }
     }
   }
