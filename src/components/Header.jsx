@@ -4,13 +4,26 @@ import styles from '@/styles/header.module.scss';
 import LogoSvg from '@/assets/svg/Logo';
 import ArrowTopSvg from '@/assets/svg/ArrowTop';
 import ModalSelect from '@/components/ModalSelect';
-// import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 
 export default function Header() {
-  // const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const [isOpenLanguageModal, setIsOpenLanguageModal] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('KOR');
-  const languages = ['KOR', 'ENG', 'JPN'];
+  const languages = [
+    {
+      label: 'KOR',
+      value: 'ko',
+    },
+    {
+      label: 'ENG',
+      value: 'en',
+    },
+  ];
+
+  const handleLanguageChange = (newLanguage) => {
+    i18n.changeLanguage(newLanguage);
+    setIsOpenLanguageModal(false);
+  };
 
   return (
     <div className={styles.header}>
@@ -29,20 +42,19 @@ export default function Header() {
               className={styles.header__inner__menu__language__button}
               onClick={() => setIsOpenLanguageModal(!isOpenLanguageModal)}
             >
-              {currentLanguage}
+              {languages.find((language) => language.value === i18n.language).label}
             </button>
             <span className={styles.header__inner__menu__language__arrow}>
               <ArrowTopSvg color="rgb(111, 117, 123)" />
             </span>
-
             {isOpenLanguageModal && (
               <ModalSelect
                 isOpen={isOpenLanguageModal}
                 setOpen={setIsOpenLanguageModal}
                 className={styles.header__inner__menu__language__modal}
-                options={languages.map((language) => ({ label: language, value: language }))}
-                value={currentLanguage}
-                // onChange={handleLanguageChange}
+                options={languages}
+                value={i18n.language}
+                onChange={handleLanguageChange}
               />
             )}
           </li>

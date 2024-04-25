@@ -1,4 +1,4 @@
-const ModalSelect = ({ isOpen, setOpen, options, value, onChange, className }) => {
+const ModalSelect = ({ options, value, onChange, className }) => {
   return (
     <ul className={className}>
       {options.map((item, key) => {
