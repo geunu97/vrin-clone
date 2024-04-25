@@ -19,6 +19,7 @@ import Vrin3dImageBag8 from '@/assets/images/home_bag_8-38aed96a.png';
 import Vrin3dImageBag9 from '@/assets/images/home_bag_9-5e42e9c2.png';
 import Vrin3dImageBag10 from '@/assets/images/home_bag_10-3c83f6b4.png';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import styles from '@/styles/home.module.scss';
 
 export const getStaticProps = async ({ locale }) => ({
@@ -30,6 +31,7 @@ export const getStaticProps = async ({ locale }) => ({
 
 export default function Home() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const activeImageSources = [
     Vrin3dImageBag1,
@@ -54,17 +56,19 @@ export default function Home() {
       <div className={styles.home__section0}>
         <div className={styles.home__section0__content}>
           <div className={styles.home__section0__content__text}>
-            <p className={styles.home__section0__content__text__title}>AI로 만드는 3D 모델</p>
-            <p className={styles.home__section0__content__text__description}>
-              인공지능으로 자동 생성되는 3D 모델과
-              <br />
-              손쉬운 편집을 경험해보세요.
-            </p>
+            <p
+              className={styles.home__section0__content__text__title}
+              dangerouslySetInnerHTML={{ __html: t('sentence.ai_3d_model_creation') }}
+            />
+            <p
+              className={styles.home__section0__content__text__description}
+              dangerouslySetInnerHTML={{ __html: t('sentence.ai_3d_model_description') }}
+            />
             <button
               className={styles.home__section0__content__text__button}
               onClick={() => router.push('/register')}
             >
-              무료로 시작하기
+              {t('sentence.start_for_free')}
             </button>
           </div>
         </div>
@@ -82,16 +86,14 @@ export default function Home() {
           ></video>
         </div>
         <div className={styles.home__section1__content}>
-          <p className={styles.home__section1__content__title}>
-            모바일 기반의
-            <br />
-            간편한 3D 스캐닝
-          </p>
-          <p className={styles.home__section1__content__description}>
-            스튜디오와 고가의 스캐너 없이도
-            <br />
-            누구나, 언제든
-          </p>
+          <p
+            className={styles.home__section1__content__title}
+            dangerouslySetInnerHTML={{ __html: t('sentence.mobile_based_easy_3d_scanning') }}
+          />
+          <p
+            className={styles.home__section1__content__description}
+            dangerouslySetInnerHTML={{ __html: t('sentence.studio_free_3d_scanning') }}
+          />
         </div>
       </div>
       <div className={styles.home__section2}>
@@ -107,12 +109,14 @@ export default function Home() {
           ></video>
         </div>
         <div className={styles.home__section2__content}>
-          <p className={styles.home__section2__content__title}>
-            AI 기술로 더욱 빠르고
-            <br />
-            더욱 리얼하게
-          </p>
-          <p className={styles.home__section2__content__description}>3D 모델을 제작하세요.</p>
+          <p
+            className={styles.home__section2__content__title}
+            dangerouslySetInnerHTML={{ __html: t('sentence.fast_realistic_ai_technology') }}
+          />
+          <p
+            className={styles.home__section2__content__description}
+            dangerouslySetInnerHTML={{ __html: t('sentence.create_3d_models') }}
+          />
         </div>
       </div>
       <div className={styles.home__section3}>
@@ -128,70 +132,97 @@ export default function Home() {
           ></video>
         </div>
         <div className={styles.home__section3__content}>
-          <p className={styles.home__section3__content__title}>
-            3D의 손쉬운 편집과
-            <br />
-            다양한 활용
-          </p>
-          <p className={styles.home__section3__content__description}>VRIN 3D와 함께 시작하세요.</p>
+          <p
+            className={styles.home__section3__content__title}
+            dangerouslySetInnerHTML={{ __html: t('sentence.easy_editing_and_various_applications') }}
+          />
+          <p
+            className={styles.home__section3__content__description}
+            dangerouslySetInnerHTML={{ __html: t('sentence.start_with_vrin_3d') }}
+          />
         </div>
       </div>
       <div className={styles.home__section4}>
         <div className={styles.home__section4__content}>
-          <p className={styles.home__section4__content__title}>The simplest way to generate</p>
-          <p className={styles.home__section4__content__subTitle}>시간도 비용도 절약하는 3D 모델 제작</p>
-          <p className={styles.home__section4__content__description}>
-            무겁고 비싼 3D 스캐닝 장비없이 핸드폰 하나로 완성되는 3D,
-            <br />
-            시간과 비용을 절약해 콘텐츠를 효율적으로 제작하세요.
-          </p>
+          <p
+            className={styles.home__section4__content__title}
+            dangerouslySetInnerHTML={{ __html: t('sentence.the_simplest_way_to_generate') }}
+          />
+          <p
+            className={styles.home__section4__content__subTitle}
+            dangerouslySetInnerHTML={{ __html: t('sentence.save_time_and_costs') }}
+          />
+          <p
+            className={styles.home__section4__content__description}
+            dangerouslySetInnerHTML={{ __html: t('sentence.efficient_content_creation') }}
+          />
           <div className={styles.home__section4__content__box}>
             <div className={styles.home__section4__content__box__item}>
               <div className={styles.home__section4__content__box__item__header}>
                 <span className={styles.home__section4__content__box__item__header__number}>80%</span>
                 <ArrowDownSvg color="#3737CC" />
               </div>
-              <span className={styles.home__section4__content__box__item__title}>기기비용 절감</span>
-              <span className={styles.home__section4__content__box__item__description}>3D 스캐너 기준</span>
+              <span
+                className={styles.home__section4__content__box__item__title}
+                dangerouslySetInnerHTML={{ __html: t('sentence.cost_reduction_equipment') }}
+              />
+              <span
+                className={styles.home__section4__content__box__item__description}
+                dangerouslySetInnerHTML={{ __html: t('sentence.standard_3d_scanner') }}
+              />
             </div>
             <div className={styles.home__section4__content__box__item}>
               <div className={styles.home__section4__content__box__item__header}>
                 <span className={styles.home__section4__content__box__item__header__number}>4H</span>
                 <ArrowDownSvg color="#3737CC" />
               </div>
-              <span className={styles.home__section4__content__box__item__title}>시간 감축</span>
-              <span className={styles.home__section4__content__box__item__description}>모델러 작업시간 기준</span>
+              <span
+                className={styles.home__section4__content__box__item__title}
+                dangerouslySetInnerHTML={{ __html: t('sentence.time_reduction') }}
+              />
+              <span
+                className={styles.home__section4__content__box__item__description}
+                dangerouslySetInnerHTML={{ __html: t('sentence.modeler_working_time') }}
+              />
             </div>
             <div className={styles.home__section4__content__box__item}>
               <div className={styles.home__section4__content__box__item__header}>
                 <span className={styles.home__section4__content__box__item__header__number}>90%</span>
                 <ArrowDownSvg color="#3737CC" />
               </div>
-              <span className={styles.home__section4__content__box__item__title}>에셋 생성비용 절감</span>
-              <span className={styles.home__section4__content__box__item__description}>모델러 인건비 기준</span>
+              <span
+                className={styles.home__section4__content__box__item__title}
+                dangerouslySetInnerHTML={{ __html: t('sentence.asset_creation_cost_reduction') }}
+              />
+              <span
+                className={styles.home__section4__content__box__item__description}
+                dangerouslySetInnerHTML={{ __html: t('sentence.modeler_labor_cost') }}
+              />
             </div>
           </div>
         </div>
       </div>
       <div className={styles.home__section5}>
         <div className={styles.home__section5__content}>
-          <p className={styles.home__section5__content__title}>One-stop solution</p>
-          <p className={styles.home__section5__content__description}>스캔부터 편집까지 VRIN 3D에서 한번에</p>
+          <p
+            className={styles.home__section5__content__title}
+            dangerouslySetInnerHTML={{ __html: t('sentence.one_stop_solution') }}
+          />
+          <p
+            className={styles.home__section5__content__description}
+            dangerouslySetInnerHTML={{ __html: t('sentence.all_in_one_vrin_3d') }}
+          />
           <div className={styles.home__section5__content__boxes}>
             <div className={styles.home__section5__content__boxes__item}>
               <div className={styles.home__section5__content__boxes__item__inner}>
-                <span className={styles.home__section5__content__boxes__item__inner__text}>
-                  모바일 기반의
-                  <br />
-                  간편한
-                  <br />
-                  3D 스캐닝
-                </span>
-                <span className={styles.home__section5__content__boxes__item__inner__text__hover}>
-                  스튜디오와 고가의 스캐너 없이도
-                  <br />
-                  누구나, 언제나 가능한 3D 스캐닝
-                </span>
+                <span
+                  className={styles.home__section5__content__boxes__item__inner__text}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.mobile_based_easy_3d_scanning2') }}
+                />
+                <span
+                  className={styles.home__section5__content__boxes__item__inner__text__hover}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.studio_free_3d_scanning2') }}
+                />
                 <span className={styles.home__section5__content__boxes__item__inner__arrow}>
                   <ArrowTopRightSvg color="#F3EEFF" />
                 </span>
@@ -221,20 +252,14 @@ export default function Home() {
             </div>
             <div className={styles.home__section5__content__boxes__item}>
               <div className={styles.home__section5__content__boxes__item__inner}>
-                <span className={styles.home__section5__content__boxes__item__inner__text}>
-                  누구나 손쉬운 편집이
-                  <br />
-                  가능하도록
-                  <br />
-                  VRIN 3D
-                  <br />
-                  에디터
-                </span>
-                <span className={styles.home__section5__content__boxes__item__inner__text__hover}>
-                  AI 재질 생성, 배경 편집 등
-                  <br />
-                  에셋을 빠르게 편집
-                </span>
+                <span
+                  className={styles.home__section5__content__boxes__item__inner__text}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.anyone_can_edit') }}
+                />
+                <span
+                  className={styles.home__section5__content__boxes__item__inner__text__hover}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.fast_asset_editing') }}
+                />
                 <span className={styles.home__section5__content__boxes__item__inner__arrow}>
                   <ArrowTopRightSvg color="#F3EEFF" />
                 </span>
@@ -264,12 +289,15 @@ export default function Home() {
       </div>
       <div className={styles.home__demo}>
         <div className={styles.home__demo__content}>
-          <p className={styles.home__demo__content__title}>아직도 망설여지세요?</p>
+          <p
+            className={styles.home__demo__content__title}
+            dangerouslySetInnerHTML={{ __html: t('sentence.still_hesitating') }}
+          />
           <button
             className={styles.home__demo__content__button}
             onClick={() => router.push('/register')}
           >
-            무료로 시작하기
+            {t('sentence.start_for_free')}
           </button>
         </div>
       </div>

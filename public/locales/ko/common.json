@@ -1,3 +1,33 @@
 {
-  "test": "test1"
+  "word": {
+    "login": "로그인"
+  },
+  "sentence": {
+    "pricing_policy": "가격정책",
+    "start_for_free": "무료로 시작하기",
+    "ai_3d_model_creation": "AI로 만드는 3D 모델",
+    "ai_3d_model_description": "인공지능으로 자동 생성되는 3D 모델과<br/>손쉬운 편집을 경험해보세요.",
+    "mobile_based_easy_3d_scanning": "모바일 기반의<br/>간편한 3D 스캐닝",
+    "studio_free_3d_scanning": "스튜디오와 고가의 스캐너 없이도<br/>누구나, 언제든",
+    "fast_realistic_ai_technology": "AI 기술로 더욱 빠르고<br/>더욱 리얼하게",
+    "create_3d_models": "3D 모델을 제작하세요.",
+    "easy_editing_and_various_applications": "3D의 손쉬운 편집과<br/>다양한 활용",
+    "start_with_vrin_3d": "VRIN 3D와 함께 시작하세요.",
+    "the_simplest_way_to_generate": "The simplest way to generate",
+    "save_time_and_costs": "시간도 비용도 절약하는 3D 모델 제작",
+    "efficient_content_creation": "무겁고 비싼 3D 스캐닝 장비없이 핸드폰 하나로 완성되는 3D,<br/>시간과 비용을 절약해 콘텐츠를 효율적으로 제작하세요.",
+    "cost_reduction_equipment": "기기비용 절감",
+    "standard_3d_scanner": "3D 스캐너 기준",
+    "time_reduction": "시간 감축",
+    "modeler_working_time": "모델러 작업시간 기준",
+    "asset_creation_cost_reduction": "에셋 생성비용 절감",
+    "modeler_labor_cost": "모델러 인건비 기준",
+    "one_stop_solution": "One-stop solution",
+    "all_in_one_vrin_3d": "스캔부터 편집까지 VRIN 3D에서 한번에",
+    "mobile_based_easy_3d_scanning2": "모바일 기반의<br />간편한<br />3D 스캐닝",
+    "studio_free_3d_scanning2": "스튜디오와 고가의 스캐너 없이도<br />누구나, 언제나 가능한 3D 스캐닝",
+    "anyone_can_edit": "누구나 손쉬운 편집이<br/>가능하도록<br/>VRIN 3D<br/>에디터",
+    "fast_asset_editing": "AI 재질 생성, 배경 편집 등<br />에셋을 빠르게 편집",
+    "still_hesitating": "아직도 망설여지세요?"
+  }
 }
