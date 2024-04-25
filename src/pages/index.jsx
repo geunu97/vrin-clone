@@ -232,14 +232,12 @@ export default function Home() {
                 src={Vrin3dImage}
                 alt="VRIN 3D"
                 width={623}
-                height={960}
               />
               <Image
                 className={styles.home__section5__content__boxes__item__image__phone}
                 src={Vrin3dImagePhone}
                 alt="VRIN PHONE"
                 width={623}
-                height={960}
               />
               <video
                 className={styles.home__section5__content__boxes__item__video}
@@ -269,7 +267,6 @@ export default function Home() {
                 src={Vrin3dImageBag}
                 alt="VRIN BAG"
                 width={506}
-                height={508}
               />
               {activeImageSources.map((src, index) => (
                 <Image
@@ -278,9 +275,7 @@ export default function Home() {
                   style={{ opacity: index === activeImageIndex ? 1 : 0 }}
                   src={src}
                   alt={`VRIN BAG${index + 1}`}
-                  width={100}
-                  height={876}
-                  layout="responsive"
+                  width={578}
                 />
               ))}
             </div>

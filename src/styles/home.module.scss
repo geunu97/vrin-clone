@@ -252,6 +252,7 @@
           }
           &__image__chair {
             width: 106%;
+            height: auto;
             position: absolute;
             top: 35px;
             right: -32px;
@@ -260,6 +261,7 @@
           }
           &__image__phone {
             width: 105%;
+            height: auto;
             position: absolute;
             top: 34px;
             right: -31px;
@@ -278,7 +280,7 @@
           }
           &__image__bag {
             width: 86%;
-            height: 100%;
+            height: auto;
             position: absolute;
             top: 165px;
             right: 45px;
@@ -286,13 +288,15 @@
             object-fit: cover;
           }
           &__image__bag__hover {
+            width: 100%;
+            height: auto;
             position: absolute;
             top: 210px;
             right: -30px;
             pointer-events: none;
-            object-fit: cover;
             transition: opacity 1s;
             display: none;
+            object-fit: cover;
           }
         }
       }
