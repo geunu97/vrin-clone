@@ -134,3 +134,30 @@
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    &__inner {
+      padding: 0px 70px;
+      &__menu {
+        gap: 32px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    &__inner {
+      &__menu {
+        gap: 24px;
+        &__start a {
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 130%;
+          letter-spacing: 0px;
+        }
+      }
+    }
+  }
+}
