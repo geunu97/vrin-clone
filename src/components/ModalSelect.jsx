@@ -1,23 +1,27 @@
-const ModalSelect = ({ options, value, onChange, className }) => {
+import Modal from '@/components/Modal';
+
+const ModalSelect = ({ setOpen, options, value, onChange, className }) => {
   return (
-    <ul className={className}>
-      {options.map((item, key) => {
-        return (
-          <li
-            key={key}
-            className={value == item.value ? 'active' : ''}
-          >
-            <button
-              onClick={() => {
-                onChange(item.value);
-              }}
+    <Modal setOpen={setOpen}>
+      <ul className={className}>
+        {options.map((item, key) => {
+          return (
+            <li
+              key={key}
+              className={value == item.value ? 'active' : ''}
             >
-              {item.label}
-            </button>
-          </li>
-        );
-      })}
-    </ul>
+              <button
+                onClick={() => {
+                  onChange(item.value);
+                }}
+              >
+                {item.label}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </Modal>
   );
 };
 

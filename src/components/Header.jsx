@@ -49,7 +49,6 @@ export default function Header() {
             </span>
             {isOpenLanguageModal && (
               <ModalSelect
-                isOpen={isOpenLanguageModal}
                 setOpen={setIsOpenLanguageModal}
                 className={styles.header__inner__menu__language__modal}
                 options={languages}
