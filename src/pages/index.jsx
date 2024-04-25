@@ -20,6 +20,7 @@ import Vrin3dImageBag9 from '@/assets/images/home_bag_9-5e42e9c2.png';
 import Vrin3dImageBag10 from '@/assets/images/home_bag_10-3c83f6b4.png';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Meta from '@/components/Meta';
 import styles from '@/styles/home.module.scss';
 
 export const getStaticProps = async ({ locale }) => ({
@@ -52,6 +53,7 @@ export default function Home() {
 
   return (
     <main className={styles.home}>
+      <Meta />
       <Header />
       <div className={styles.home__section0}>
         <div className={styles.home__section0__content}>
