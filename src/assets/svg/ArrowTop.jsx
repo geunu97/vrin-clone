@@ -2,8 +2,7 @@ import React from 'react';
 
 export default function ArrowTopSvg({ color = 'currentColor' }) {
   return (
-    <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+    <svg      
       focusable="false"
       aria-hidden="true"
       viewBox="0 0 24 24"
