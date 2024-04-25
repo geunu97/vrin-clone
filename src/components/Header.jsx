@@ -5,8 +5,10 @@ import LogoSvg from '@/assets/svg/Logo';
 import ArrowTopSvg from '@/assets/svg/ArrowTop';
 import ModalSelect from '@/components/ModalSelect';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  const router = useRouter();
   const { t, i18n } = useTranslation('common');
   const [isOpenLanguageModal, setIsOpenLanguageModal] = useState(false);
   const languages = [
@@ -21,7 +23,7 @@ export default function Header() {
   ];
 
   const handleLanguageChange = (newLanguage) => {
-    i18n.changeLanguage(newLanguage);
+    router.push(router.pathname, router.asPath, { locale: newLanguage });
     setIsOpenLanguageModal(false);
   };
 
@@ -35,7 +37,7 @@ export default function Header() {
         </div>
         <ul className={styles.header__inner__menu}>
           <li className={styles.header__inner__menu__price}>
-            <Link href="/pricing">가격정책</Link>
+            <Link href="/pricing">{t('sentence.pricing_policy')}</Link>
           </li>
           <li className={styles.header__inner__menu__language}>
             <button
@@ -58,10 +60,10 @@ export default function Header() {
             )}
           </li>
           <li className={styles.header__inner__menu__login}>
-            <Link href="/login">로그인</Link>
+            <Link href="/login">{t('word.login')}</Link>
           </li>
           <li className={styles.header__inner__menu__start}>
-            <Link href="/register">무료로 시작하기</Link>
+            <Link href="/register">{t('sentence.start_for_free')}</Link>
           </li>
         </ul>
       </div>
