@@ -3,7 +3,7 @@
     background-color: rgb(5, 7, 14);
     background-image: url('../assets/images/home_A-1_PC-24bf28eb.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
     width: 100%;
     height: 100vh;
     &__content {
@@ -335,6 +335,307 @@
         font-size: 2.4rem;
         line-height: 140%;
         color: rgb(55, 55, 204);
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .home {
+    &__section0 {      
+      background-image: url('../assets/images/home_A-1_laptop-f5526bf8.png');     
+      width: auto;
+      height: auto;            
+      &__content {        
+        max-width: 844px;
+        max-height: 870px;
+        &__text {
+          position: absolute;
+          left: 0px;
+          bottom: 120px;
+          z-index: 2;
+          &__title {            
+            font-size: 4.8rem;            
+          }
+          &__description {            
+            font-size: 2.4rem;            
+          }
+          &__button {
+            max-width: 243px;
+            margin-top: 48px;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    &__section1,
+    &__section2,
+    &__section3 {
+      &__content {        
+        &__title {          
+          font-size: 4rem;
+          margin-bottom: 8px;
+        }
+        &__description {          
+          font-size: 2.4rem;          
+        }
+      }
+    }
+    &__section4 {      
+      &__content {
+        max-width: 844px;
+        padding: 100px 0px;
+        &__title {
+          font-size: 1.8rem;
+          margin-bottom: 8px;
+        }
+        &__subTitle {
+          font-size: 3.2rem;
+          font-weight: 600;
+        }
+        &__description {
+          font-size: 1.8rem;
+          margin-top: 12px;
+        }
+        &__box {
+          margin-top: 40px;
+          padding: 48px 0px;
+          &__item {            
+            gap: 4px;
+            &__header {              
+              gap: 8px;
+              &__number {
+                font-size: 5.6rem;
+              }
+              svg {
+                width: 40px;
+                height: 40px;
+              }
+            }
+            &__title {
+              font-size: 1.8rem;          
+            }
+            &__description {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+    &__section5 {      
+      &__content {
+        padding: 100px 0px 200px;
+        &__title {
+          font-size: 1.8rem;
+          margin-bottom: 8px;
+        }
+        &__description {
+          font-size: 3.2rem;
+          font-weight: 600;
+        }
+        &__boxes {
+          margin-top: 40px;
+          gap: 28px;
+          &__item {
+            max-width: 408px;
+            height: 420px;
+            border-radius: 16px;
+            padding: 40px 44px;            
+            &__inner {  
+              &__text {
+                font-size: 2.4rem;
+              }
+              &__text__hover {
+                font-size: 2rem;
+              }
+              svg {
+                min-width: 40px;
+                width: 40px;
+                height: 40px;
+              }
+            }
+            &__image__chair {
+              width: 107%;
+              min-width: 415px;
+              top: 17px;
+              right: -20px;
+            }
+            &__image__phone {
+              min-width: 415px;
+              top: 20px;
+              right: -18px;
+            }
+            &__video {
+              min-width: 152px;
+              top: 16vw;
+              right: 59px;
+            }
+            &__image__bag {
+              width: 85%;
+              min-width: 320px;
+              top: 115px;
+              right: 35px;
+            }
+            &__image__bag__hover {
+              top: 188px;
+              right: -12px;
+            }
+          }
+        }
+      }
+    }
+    &__demo {      
+      &__content {        
+        &__title {
+          font-size: 2.8rem;
+        }
+        &__button {
+          font-size: 1.8rem;
+          padding: 12px 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    &__section0 {      
+      background-image: url('../assets/images/home_A-1_tablet-00240f72.png');       
+      &__content {
+        max-width: 630px;
+        width: calc(100% - 140px);
+        max-height: 540px;
+        &__text {          
+          bottom: 90px;          
+          &__title {            
+            font-size: 4.4rem;            
+          }
+          &__button {
+            max-width: 210px;
+            padding: 12px;
+            margin-top: 40px;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+    &__section1,
+    &__section2,
+    &__section3 {
+      &__content {        
+        &__title {          
+          font-size: 3.2rem;                              
+        }
+        &__description {          
+          font-size: 2rem;          
+        }
+      }
+    }
+    &__section4 {      
+      &__content {
+        max-width: 630px;
+        width: calc(100% - 140px);
+        &__subTitle {
+          font-size: 2.8rem;
+        }
+        &__description {
+          font-size: 1.6rem;
+        }
+        &__box {
+          margin-top: 32px;
+          padding: 32px 0px;
+          &__item {            
+            &__header {                            
+              &__number {
+                font-size: 4rem;
+              }
+              svg {
+                width: 32px;
+                height: 32px;
+              }
+            }
+            &__title {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+    &__section5 {      
+      &__content {
+        width: calc(100% - 140px);
+        &__description {
+          font-size: 2.8rem;
+        }
+        &__boxes {          
+          flex-direction: column;
+          margin-top: 103px;
+          gap: 149px;
+          &__item {
+            flex-direction: column;
+            max-width: 630px;
+            width: 100%;
+            height: 250px;
+            border-radius: 22px;
+            padding: 48px 56px;
+            &__inner {
+              flex-direction: column;
+              gap: 28px;
+              &__text {
+                font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+              }
+              &__text__hover {
+                font-size: clamp(1.6rem, 2.7vw, 2rem);
+              }
+              svg {
+                min-width: 36px;
+                width: 36px;
+                height: 36px;
+              }
+            }
+            &__image__chair {
+              width: 377px;
+              min-width: 377px;
+              top: -120px;
+              right: 5px;
+            }
+            &__image__phone {
+              width: 380px;
+              min-width: 380px;
+              top: -120px;
+              right: 6px;
+            }
+            &__video {
+              width: 157px;
+              top: -15px;
+              right: 68px;
+            }
+            &__image__bag {            
+                width: 326px;
+                min-width: 326px;
+                top: -52px;
+                right: 51px;
+            }
+            &__image__bag__hover {
+              width: 350px;
+              top: 10px;
+              right: -40px;
+            }
+          }
+        }
+      }
+    }
+    &__demo {      
+      &__content {        
+        &__title {
+          font-size: 2.4rem;
+        }
+        &__button {
+          font-size: 2rem;
+        }
       }
     }
   }
