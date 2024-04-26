@@ -3,7 +3,7 @@
     background-color: rgb(5, 7, 14);
     background-image: url('../assets/images/home_A-1_PC-24bf28eb.png');
     background-size: cover;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     &__content {
@@ -340,15 +340,13 @@
   }
 }
 
-
-
 @media only screen and (max-width: 1024px) {
   .home {
-    &__section0 {      
-      background-image: url('../assets/images/home_A-1_laptop-f5526bf8.png');     
+    &__section0 {
+      background-image: url('../assets/images/home_A-1_laptop-f5526bf8.png');
       width: auto;
-      height: auto;            
-      &__content {        
+      height: auto;
+      &__content {
         max-width: 844px;
         max-height: 870px;
         &__text {
@@ -356,11 +354,11 @@
           left: 0px;
           bottom: 120px;
           z-index: 2;
-          &__title {            
-            font-size: 4.8rem;            
+          &__title {
+            font-size: 4.8rem;
           }
-          &__description {            
-            font-size: 2.4rem;            
+          &__description {
+            font-size: 2.4rem;
           }
           &__button {
             max-width: 243px;
@@ -373,17 +371,17 @@
     &__section1,
     &__section2,
     &__section3 {
-      &__content {        
-        &__title {          
+      &__content {
+        &__title {
           font-size: 4rem;
           margin-bottom: 8px;
         }
-        &__description {          
-          font-size: 2.4rem;          
+        &__description {
+          font-size: 2.4rem;
         }
       }
     }
-    &__section4 {      
+    &__section4 {
       &__content {
         max-width: 844px;
         padding: 100px 0px;
@@ -402,9 +400,9 @@
         &__box {
           margin-top: 40px;
           padding: 48px 0px;
-          &__item {            
+          &__item {
             gap: 4px;
-            &__header {              
+            &__header {
               gap: 8px;
               &__number {
                 font-size: 5.6rem;
@@ -415,7 +413,7 @@
               }
             }
             &__title {
-              font-size: 1.8rem;          
+              font-size: 1.8rem;
             }
             &__description {
               font-size: 1rem;
@@ -424,7 +422,7 @@
         }
       }
     }
-    &__section5 {      
+    &__section5 {
       &__content {
         padding: 100px 0px 200px;
         &__title {
@@ -442,8 +440,8 @@
             max-width: 408px;
             height: 420px;
             border-radius: 16px;
-            padding: 40px 44px;            
-            &__inner {  
+            padding: 40px 44px;
+            &__inner {
               &__text {
                 font-size: 2.4rem;
               }
@@ -486,8 +484,8 @@
         }
       }
     }
-    &__demo {      
-      &__content {        
+    &__demo {
+      &__content {
         &__title {
           font-size: 2.8rem;
         }
@@ -502,16 +500,16 @@
 
 @media only screen and (max-width: 768px) {
   .home {
-    &__section0 {      
-      background-image: url('../assets/images/home_A-1_tablet-00240f72.png');       
+    &__section0 {
+      background-image: url('../assets/images/home_A-1_tablet-00240f72.png');
       &__content {
         max-width: 630px;
         width: calc(100% - 140px);
         max-height: 540px;
-        &__text {          
-          bottom: 90px;          
-          &__title {            
-            font-size: 4.4rem;            
+        &__text {
+          bottom: 90px;
+          &__title {
+            font-size: 4.4rem;
           }
           &__button {
             max-width: 210px;
@@ -525,16 +523,16 @@
     &__section1,
     &__section2,
     &__section3 {
-      &__content {        
-        &__title {          
-          font-size: 3.2rem;                              
+      &__content {
+        &__title {
+          font-size: 3.2rem;
         }
-        &__description {          
-          font-size: 2rem;          
+        &__description {
+          font-size: 2rem;
         }
       }
     }
-    &__section4 {      
+    &__section4 {
       &__content {
         max-width: 630px;
         width: calc(100% - 140px);
@@ -547,8 +545,8 @@
         &__box {
           margin-top: 32px;
           padding: 32px 0px;
-          &__item {            
-            &__header {                            
+          &__item {
+            &__header {
               &__number {
                 font-size: 4rem;
               }
@@ -564,13 +562,13 @@
         }
       }
     }
-    &__section5 {      
+    &__section5 {
       &__content {
         width: calc(100% - 140px);
         &__description {
           font-size: 2.8rem;
         }
-        &__boxes {          
+        &__boxes {
           flex-direction: column;
           margin-top: 103px;
           gap: 149px;
@@ -613,11 +611,11 @@
               top: -15px;
               right: 68px;
             }
-            &__image__bag {            
-                width: 326px;
-                min-width: 326px;
-                top: -52px;
-                right: 51px;
+            &__image__bag {
+              width: 326px;
+              min-width: 326px;
+              top: -52px;
+              right: 51px;
             }
             &__image__bag__hover {
               width: 350px;
@@ -628,13 +626,176 @@
         }
       }
     }
-    &__demo {      
-      &__content {        
+    &__demo {
+      &__content {
         &__title {
           font-size: 2.4rem;
         }
         &__button {
           font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    &__section0 {
+      background-image: url('../assets/images/home_A-1_mob-742b0262.png');
+      &__content {
+        width: calc(100% - 40px);
+        max-height: 420px;
+        &__text {
+          bottom: 70px;
+          &__title {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+          }
+          &__description {
+            font-size: 1.6rem;
+          }
+          &__button {
+            max-width: 160px;
+            padding: 10px;
+            margin-top: 24px;
+            border-radius: 4px;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+    &__section1,
+    &__section2,
+    &__section3 {
+      height: 100vh;
+      &__content {
+        top: 120px;
+        left: 5%;
+        transform: unset;
+        background-color: unset;
+        border-radius: unset;
+        padding: 0px;
+        &__title {
+          margin-bottom: 4px;
+          font-size: 2.4rem;
+        }
+        &__description {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &__section4 {
+      &__content {
+        width: calc(100% - 40px);
+        padding: 48px 0px;
+        &__title {
+          font-size: 1.4rem;
+        }
+        &__subTitle {
+          font-size: 2rem;
+        }
+        &__description {
+          font-size: 1.2rem;
+          margin-top: 10px;
+        }
+        &__box {
+          width: fit-content;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          margin: 24px auto auto;
+          padding: 32px 24px;
+          gap: 32px;
+          &__item {
+            gap: 2px;
+            &__header {
+              &__number {
+                font-size: 3.2rem;
+              }
+              svg {
+                width: 24px;
+                height: 24px;
+              }
+            }
+            &__title {
+              font-size: 1.4rem;
+            }
+            &__description {
+              font-size: 0.8rem;
+            }
+            &.creation_cost_reduction {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &__section5 {
+      &__content {
+        width: calc(100% - 40px);
+        padding: 48px 0px 118px;
+        &__title {
+          font-size: 1.4rem;
+        }
+        &__description {
+          font-size: 2rem;
+        }
+        &__boxes {
+          margin-top: 24px;
+          gap: 110px;
+          &__item {
+            max-width: 560px;
+            padding: 28px;
+            &:hover {
+              background: linear-gradient(221deg, rgba(255, 255, 255, 0.2) -0.09%, rgba(81, 30, 198, 0.14) 99.94%);
+              .home__section5__content__boxes__item {
+                &__inner__text,
+                &__image__chair,
+                &__image__bag,
+                &__inner__arrow {
+                  display: block;
+                }
+                &__inner__text__hover,
+                &__image__phone,
+                &__video,
+                &__image__bag__hover {
+                  display: none;
+                }
+              }
+            }
+            &__inner {
+              flex-direction: column;
+              gap: 28px;
+              &__text {
+                font-size: 1.6rem;
+              }
+            }
+            &__image__chair {
+              width: 53%;
+              min-width: 295px;
+              top: -12px;
+              right: -14px;
+            }
+            &__image__bag {
+              width: 43%;
+              min-width: 240px;
+              top: 22px;
+              right: 18px;
+            }
+          }
+        }
+      }
+    }
+    &__demo {
+      &__content {
+        &__title {
+          font-size: 1.8rem;
+        }
+        &__button {
+          border-radius: 4px;
+          padding: 10px 24px;
+          font-size: 1.4rem;
         }
       }
     }

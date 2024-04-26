@@ -187,7 +187,7 @@ export default function Home() {
                 dangerouslySetInnerHTML={{ __html: t('sentence.modeler_working_time') }}
               />
             </div>
-            <div className={styles.home__section4__content__box__item}>
+            <div className={`${styles.home__section4__content__box__item} ${styles.creation_cost_reduction}`}>
               <div className={styles.home__section4__content__box__item__header}>
                 <span className={styles.home__section4__content__box__item__header__number}>90%</span>
                 <ArrowDownSvg color="#3737CC" />
