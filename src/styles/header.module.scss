@@ -135,6 +135,103 @@
   }
 }
 
+.header__mobile {
+  width: 100%;
+  min-height: 60px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  &__inner {
+    padding: 0px 20px;
+    height: 100%;
+    &__main {
+      padding-top: 17px;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      align-items: center;
+      &__left {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        &__menu {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        & > a {
+          margin-left: 16px;
+          svg {
+            width: 46px;
+          }
+        }
+      }
+      & > a {
+        width: fit-content;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0px;
+        cursor: pointer;
+        color: rgb(110, 133, 252);
+        text-decoration: none;
+      }
+    }
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 32px 0px;
+      & > a {
+        width: fit-content;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+      &__language {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        opacity: 1;
+        &__KO,
+        &__EN {
+          width: fit-content;
+          font-size: 1.4rem;
+          font-weight: 600;
+          line-height: 140%;
+          letter-spacing: 0px;
+          cursor: pointer;
+          color: rgb(86, 93, 99);
+        }
+        :global .active {
+          color: rgb(255, 255, 255);
+        }
+        &__divider {
+          display: flex;
+          width: 1px;
+          height: 18px;
+          background-color: rgb(111, 117, 123);
+          margin: 0px 8px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .header {
     &__inner {
@@ -159,5 +256,14 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    display: none;
+  }
+  .header__mobile {
+    display: block;
   }
 }
