@@ -3,6 +3,10 @@ import { useRouter } from 'next/router';
 import { useState, useRef } from 'react';
 import useInterval from '@/hooks/useInterval';
 import Header from '@/components/Header';
+import Video from '@/components/Video';
+import Meta from '@/components/Meta';
+import Slider from 'react-slick';
+import styles from '@/styles/home.module.scss';
 import ArrowDownSvg from '@/assets/svg/ArrowDown';
 import ArrowTopRightSvg from '@/assets/svg/ArrowTopRight';
 import ArrowTopRightOutwardSvg from '@/assets/svg/ArrowTopRightOutward';
@@ -23,12 +27,8 @@ import Vrin3dImageBag7 from '@/assets/images/home_bag_7-dc30c20d.png';
 import Vrin3dImageBag8 from '@/assets/images/home_bag_8-38aed96a.png';
 import Vrin3dImageBag9 from '@/assets/images/home_bag_9-5e42e9c2.png';
 import Vrin3dImageBag10 from '@/assets/images/home_bag_10-3c83f6b4.png';
-import Video from '@/components/Video';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import Meta from '@/components/Meta';
-import Slider from 'react-slick';
-import styles from '@/styles/home.module.scss';
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
@@ -85,9 +85,7 @@ export default function Home() {
       </div>
       <div className={styles.home__section1}>
         <div className={styles.home__section1__video__container}>
-          <Video                       
-            src="/assets/videos/home_content_1_PC-3cb3a75d.mp4"            
-          />
+          <Video src="/assets/videos/home_content_1_PC-3cb3a75d.mp4" />
         </div>
         <div className={styles.home__section1__content}>
           <p
@@ -229,7 +227,12 @@ export default function Home() {
                 width={623}
                 loading="lazy"
               />
-             <Video src="/assets/videos/home_2_PC-f15f3e50.mp4" />
+              <Video
+                className={styles.home__section5__content__boxes__item__video}
+                width="40%"
+                height="auto"
+                src="/assets/videos/home_2_PC-f15f3e50.mp4"
+              />
             </div>
             <div className={styles.home__section5__content__boxes__item}>
               <div className={styles.home__section5__content__boxes__item__inner}>
