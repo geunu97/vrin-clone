@@ -23,6 +23,7 @@ import Vrin3dImageBag7 from '@/assets/images/home_bag_7-dc30c20d.png';
 import Vrin3dImageBag8 from '@/assets/images/home_bag_8-38aed96a.png';
 import Vrin3dImageBag9 from '@/assets/images/home_bag_9-5e42e9c2.png';
 import Vrin3dImageBag10 from '@/assets/images/home_bag_10-3c83f6b4.png';
+import Video from '@/components/Video';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Meta from '@/components/Meta';
@@ -54,14 +55,6 @@ export default function Home() {
     Vrin3dImageBag10,
   ];
 
-  const next = () => {
-    sliderRef.current.slickNext();
-  };
-
-  const previous = () => {
-    sliderRef.current.slickPrev();
-  };
-
   useInterval(() => {
     setActiveImageIndex((prevIndex) => (prevIndex + 1) % 10);
   }, 1000);
@@ -92,15 +85,9 @@ export default function Home() {
       </div>
       <div className={styles.home__section1}>
         <div className={styles.home__section1__video__container}>
-          <video
-            width="100%"
-            height="100%"
-            loop={true}
-            playsInline={true}
-            autoPlay={true}
-            src="/assets/videos/home_content_1_PC-3cb3a75d.mp4"
-            muted={true}
-          ></video>
+          <Video                       
+            src="/assets/videos/home_content_1_PC-3cb3a75d.mp4"            
+          />
         </div>
         <div className={styles.home__section1__content}>
           <p
@@ -115,15 +102,7 @@ export default function Home() {
       </div>
       <div className={styles.home__section2}>
         <div className={styles.home__section2__video__container}>
-          <video
-            width="100%"
-            height="100%"
-            loop={true}
-            playsInline={true}
-            autoPlay={true}
-            src="/assets/videos/home_content_2_PC-c0a5dbbe.mp4"
-            muted={true}
-          ></video>
+          <Video src="/assets/videos/home_content_2_PC-c0a5dbbe.mp4" />
         </div>
         <div className={styles.home__section2__content}>
           <p
@@ -138,15 +117,7 @@ export default function Home() {
       </div>
       <div className={styles.home__section3}>
         <div className={styles.home__section3__video__container}>
-          <video
-            width="100%"
-            height="100%"
-            loop={true}
-            playsInline={true}
-            autoPlay={true}
-            src="/assets/videos/home_content_3_PC-706ebb88.mp4"
-            muted={true}
-          ></video>
+          <Video src="/assets/videos/home_content_3_PC-706ebb88.mp4" />
         </div>
         <div className={styles.home__section3__content}>
           <p
@@ -249,21 +220,16 @@ export default function Home() {
                 src={Vrin3dImage}
                 alt="VRIN 3D"
                 width={623}
+                loading="lazy"
               />
               <Image
                 className={styles.home__section5__content__boxes__item__image__phone}
                 src={Vrin3dImagePhone}
                 alt="VRIN PHONE"
                 width={623}
+                loading="lazy"
               />
-              <video
-                className={styles.home__section5__content__boxes__item__video}
-                loop={true}
-                playsInline={true}
-                autoPlay={true}
-                src="/assets/videos/home_2_PC-f15f3e50.mp4"
-                muted={true}
-              ></video>
+             <Video src="/assets/videos/home_2_PC-f15f3e50.mp4" />
             </div>
             <div className={styles.home__section5__content__boxes__item}>
               <div className={styles.home__section5__content__boxes__item__inner}>
@@ -284,6 +250,7 @@ export default function Home() {
                 src={Vrin3dImageBag}
                 alt="VRIN BAG"
                 width={506}
+                loading="lazy"
               />
               {activeImageSources.map((src, index) => (
                 <Image
@@ -293,6 +260,7 @@ export default function Home() {
                   src={src}
                   alt={`VRIN BAG${index + 1}`}
                   width={578}
+                  loading="lazy"
                 />
               ))}
             </div>
@@ -319,12 +287,14 @@ export default function Home() {
               src={Vrin3dImagePhone2}
               alt={`VRIN PHONE2`}
               width={722}
+              loading="lazy"
             />
             <Image
               className={styles.home__section6__inner__content__image__mobilePhone}
               src={Vrin3dImageMobilePhone}
               alt={`VRIN MOBIE PHONE`}
               width={280}
+              loading="lazy"
             />
           </div>
           <div className={styles.home__section6__inner__slide}>
@@ -365,10 +335,10 @@ export default function Home() {
               </div>
             </Slider>
             <div className={styles.home__section6__inner__slide__arrow}>
-              <span onClick={previous}>
+              <span onClick={() => sliderRef.current.slickPrev()}>
                 <ArrowLeftSvg color="#6F757B" />
               </span>
-              <span onClick={next}>
+              <span onClick={() => sliderRef.current.slickNext()}>
                 <ArrowRightSvg color="#6F757B" />
               </span>
             </div>
