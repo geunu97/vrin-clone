@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function ArrowRightSvg({ color = 'currentColor' }) {
+const ArrowRightSvg = ({ color = 'currentColor' }) => {
   return (
     <svg
       width="36"
@@ -25,4 +23,6 @@ export default function ArrowRightSvg({ color = 'currentColor' }) {
       ></path>
     </svg>
   );
-}
+};
+
+export default ArrowRightSvg;

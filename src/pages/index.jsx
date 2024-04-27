@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import { useRef } from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import ImageSlider from '@/components/ImageSlider';
 import Header from '@/components/Header';
@@ -27,8 +29,6 @@ import Vrin3dImageBag7 from '@/assets/images/home_bag_7-dc30c20d.png';
 import Vrin3dImageBag8 from '@/assets/images/home_bag_8-38aed96a.png';
 import Vrin3dImageBag9 from '@/assets/images/home_bag_9-5e42e9c2.png';
 import Vrin3dImageBag10 from '@/assets/images/home_bag_10-3c83f6b4.png';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
@@ -37,7 +37,7 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default function Home() {
+const Home = () => {
   const router = useRouter();
   const { t } = useTranslation();
   const sliderRef = useRef(null);
@@ -354,4 +354,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

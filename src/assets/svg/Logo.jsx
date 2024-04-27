@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function LogoSvg({ color = 'currentColor' }) {
+const LogoSvg = ({ color = 'currentColor' }) => {
   return (
     <svg
       width="76"
@@ -26,4 +24,6 @@ export default function LogoSvg({ color = 'currentColor' }) {
       ></path>
     </svg>
   );
-}
+};
+
+export default LogoSvg;

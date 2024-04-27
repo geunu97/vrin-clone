@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function MenuSvg({ color = 'currentColor' }) {
+const MenuSvg = ({ color = 'currentColor' }) => {
   return (
     <svg
       width="18"
@@ -15,4 +13,6 @@ export default function MenuSvg({ color = 'currentColor' }) {
       ></path>
     </svg>
   );
-}
+};
+
+export default MenuSvg;

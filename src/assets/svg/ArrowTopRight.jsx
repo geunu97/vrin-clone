@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function ArrowTopRightSvg({ color = 'currentColor' }) {
+const ArrowTopRightSvg = ({ color = 'currentColor' }) => {
   return (
     <svg
       width="56"
@@ -24,4 +22,6 @@ export default function ArrowTopRightSvg({ color = 'currentColor' }) {
       </g>
     </svg>
   );
-}
+};
+
+export default ArrowTopRightSvg;

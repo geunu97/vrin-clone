@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Meta() {
+const Meta = () => {
   return (
     <Head>
       {/* HTML Meta Tags */}
@@ -63,4 +63,6 @@ export default function Meta() {
       />
     </Head>
   );
-}
+};
+
+export default Meta;

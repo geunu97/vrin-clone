@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from '@/styles/header.module.scss';
 import LogoSvg from '@/assets/svg/Logo';
@@ -6,10 +8,8 @@ import ArrowTopSvg from '@/assets/svg/ArrowTop';
 import MenuSvg from '@/assets/svg/Menu';
 import CloseSvg from '@/assets/svg/Close';
 import ModalSelect from '@/components/ModalSelect';
-import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
 
-export default function Header() {
+const Header = () => {
   const router = useRouter();
   const { t, i18n } = useTranslation('common');
   const [isOpenLanguageModal, setIsOpenLanguageModal] = useState(false);
@@ -113,4 +113,6 @@ export default function Header() {
       </div>
     </>
   );
-}
+};
+
+export default Header;

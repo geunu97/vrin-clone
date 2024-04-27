@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function ArrowDownSvg({ color = 'currentColor' }) {
+const ArrowDownSvg = ({ color = 'currentColor' }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +13,6 @@ export default function ArrowDownSvg({ color = 'currentColor' }) {
       ></path>
     </svg>
   );
-}
+};
+
+export default ArrowDownSvg;

@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function CloseSvg({ color = 'currentColor' }) {
+const CloseSvg = ({ color = 'currentColor' }) => {
   return (
     <svg
       width="24"
@@ -26,4 +24,6 @@ export default function CloseSvg({ color = 'currentColor' }) {
       </defs>
     </svg>
   );
-}
+};
+
+export default CloseSvg;
