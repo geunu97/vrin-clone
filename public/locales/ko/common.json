@@ -1,6 +1,9 @@
 {
   "word": {
-    "login": "로그인"
+    "login": "로그인",
+    "virtual_showroom": "가상쇼룸",
+    "exhibition": "전시",
+    "product_promotion": "상품홍보"
   },
   "sentence": {
     "pricing_policy": "가격정책",
@@ -28,6 +31,9 @@
     "studio_free_3d_scanning2": "스튜디오와 고가의 스캐너 없이도<br />누구나, 언제나 가능한 3D 스캐닝",
     "anyone_can_edit": "누구나 손쉬운 편집이<br/>가능하도록<br/>VRIN 3D<br/>에디터",
     "fast_asset_editing": "AI 재질 생성, 배경 편집 등<br />에셋을 빠르게 편집",
-    "still_hesitating": "아직도 망설여지세요?"
+    "still_hesitating": "아직도 망설여지세요?",
+    "various_contents": "Various contents with VRIN 3D",
+    "various_contents_description": "생성한 3D 모델로 제작하는 다양한 콘텐츠",
+    "various_contents_description2": "VRIN 3D에서 제작한 3D 모델을 다운받아<br/>상품 홍보, 가상쇼룸, 광고 VFX 등에 사용하세요."
   }
 }

@@ -1,12 +1,17 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import useInterval from '@/hooks/useInterval';
 import Header from '@/components/Header';
 import ArrowDownSvg from '@/assets/svg/ArrowDown';
 import ArrowTopRightSvg from '@/assets/svg/ArrowTopRight';
+import ArrowTopRightOutwardSvg from '@/assets/svg/ArrowTopRightOutward';
+import ArrowLeftSvg from '@/assets/svg/ArrowLeft';
+import ArrowRightSvg from '@/assets/svg/ArrowRight';
 import Vrin3dImage from '@/assets/images/home_C-1_PC_ko-093e56a1.png';
 import Vrin3dImagePhone from '@/assets/images/home_C-3_PC-52386fbc.png';
+import Vrin3dImagePhone2 from '@/assets/images/home_D-1_PC-0b362984.png';
+import Vrin3dImageMobilePhone from '@/assets/images/home_D-1_Laptop-1ca25de5.png';
 import Vrin3dImageBag from '@/assets/images/home_C-2_PC_ko-5168634f.png';
 import Vrin3dImageBag1 from '@/assets/images/home_bag_1-016e6c5c.png';
 import Vrin3dImageBag2 from '@/assets/images/home_bag_2-ec220ca9.png';
@@ -21,6 +26,7 @@ import Vrin3dImageBag10 from '@/assets/images/home_bag_10-3c83f6b4.png';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Meta from '@/components/Meta';
+import Slider from 'react-slick';
 import styles from '@/styles/home.module.scss';
 
 export const getStaticProps = async ({ locale }) => ({
@@ -33,6 +39,7 @@ export const getStaticProps = async ({ locale }) => ({
 export default function Home() {
   const router = useRouter();
   const { t } = useTranslation();
+  const sliderRef = useRef(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const activeImageSources = [
     Vrin3dImageBag1,
@@ -46,6 +53,14 @@ export default function Home() {
     Vrin3dImageBag9,
     Vrin3dImageBag10,
   ];
+
+  const next = () => {
+    sliderRef.current.slickNext();
+  };
+
+  const previous = () => {
+    sliderRef.current.slickPrev();
+  };
 
   useInterval(() => {
     setActiveImageIndex((prevIndex) => (prevIndex + 1) % 10);
@@ -281,6 +296,83 @@ export default function Home() {
                 />
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.home__section6}>
+        <div className={styles.home__section6__inner}>
+          <div className={styles.home__section6__inner__content}>
+            <p
+              className={styles.home__section6__inner__content__title}
+              dangerouslySetInnerHTML={{ __html: t('sentence.various_contents') }}
+            />
+            <p
+              className={styles.home__section6__inner__content__subTitle}
+              dangerouslySetInnerHTML={{ __html: t('sentence.various_contents_description') }}
+            />
+            <p
+              className={styles.home__section6__inner__content__description}
+              dangerouslySetInnerHTML={{ __html: t('sentence.various_contents_description2') }}
+            />
+            <Image
+              className={styles.home__section6__inner__content__image__phone2}
+              src={Vrin3dImagePhone2}
+              alt={`VRIN PHONE2`}
+              width={722}
+            />
+            <Image
+              className={styles.home__section6__inner__content__image__mobilePhone}
+              src={Vrin3dImageMobilePhone}
+              alt={`VRIN MOBIE PHONE`}
+              width={280}
+            />
+          </div>
+          <div className={styles.home__section6__inner__slide}>
+            <Slider
+              ref={sliderRef}
+              className="slider"
+              dots={false}
+              slidesToShow={3}
+              slidesToScroll={1}
+              arrows={false}
+            >
+              <div className={`slide__item item1`}>
+                <div className={`content`}>
+                  <span
+                    className={`title`}
+                    dangerouslySetInnerHTML={{ __html: t('word.virtual_showroom') }}
+                  />
+                  <ArrowTopRightOutwardSvg />
+                </div>
+              </div>
+              <div className={`slide__item item2`}>
+                <div className={`content`}>
+                  <span
+                    className={`title`}
+                    dangerouslySetInnerHTML={{ __html: t('word.exhibition') }}
+                  />
+                  <ArrowTopRightOutwardSvg />
+                </div>
+              </div>
+              <div className={`slide__item item3`}>
+                <div className={`content`}>
+                  <span
+                    className={`title`}
+                    dangerouslySetInnerHTML={{ __html: t('word.product_promotion') }}
+                  />
+                  <ArrowTopRightOutwardSvg />
+                </div>
+              </div>
+            </Slider>
+            <div className={styles.home__section6__inner__slide__arrow}>
+              <span onClick={previous}>
+                <ArrowLeftSvg color="#6F757B" />
+              </span>
+              <span onClick={next}>
+                <ArrowRightSvg color="#6F757B" />
+              </span>
+            </div>
+            <div className={styles.home__section6__inner__slide__preview}></div>
           </div>
         </div>
       </div>

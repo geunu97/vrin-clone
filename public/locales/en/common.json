@@ -1,6 +1,9 @@
 {
   "word": {
-    "login": "Log in"
+    "login": "Log in",
+    "virtual_showroom": "Virtual Showroom",
+    "exhibition": "Exhibition",
+    "product_promotion": "Product Promotion"
   },
   "sentence": {
     "pricing_policy": "Pricing",
@@ -28,6 +31,9 @@
     "studio_free_3d_scanning2": "3D scanning made possible<br/>3D scanning made possible<br/>for anyone, anywhere<br/>Without studio<br/>and expensive scanner",
     "anyone_can_edit": "VRIN 3D editor,<br/>anyone can<br/>edit easily",
     "fast_asset_editing": "Quickly edit asset with<br/>AI-generated material<br/>background editing",
-    "still_hesitating": "Still hesitating?"
+    "still_hesitating": "Still hesitating?",
+    "various_contents": "Various contents with VRIN 3D",
+    "various_contents_description": "Various contents<br/>created using 3D models",
+    "various_contents_description2": "Download 3D model VRIN 3D prefabricated, use it for promotion, VR showroom, commercial VFX."
   }
 }
