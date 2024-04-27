@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState, useRef } from 'react';
-import useInterval from '@/hooks/useInterval';
+import { useRef } from 'react';
+import Image from 'next/image';
+import ImageSlider from '@/components/ImageSlider';
 import Header from '@/components/Header';
 import Video from '@/components/Video';
 import Meta from '@/components/Meta';
@@ -41,23 +41,18 @@ export default function Home() {
   const router = useRouter();
   const { t } = useTranslation();
   const sliderRef = useRef(null);
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
   const activeImageSources = [
-    Vrin3dImageBag1,
-    Vrin3dImageBag2,
-    Vrin3dImageBag3,
-    Vrin3dImageBag4,
-    Vrin3dImageBag5,
-    Vrin3dImageBag6,
-    Vrin3dImageBag7,
-    Vrin3dImageBag8,
-    Vrin3dImageBag9,
-    Vrin3dImageBag10,
+    { src: Vrin3dImageBag1, alt: 'VRIN BAG1' },
+    { src: Vrin3dImageBag2, alt: 'VRIN BAG2' },
+    { src: Vrin3dImageBag3, alt: 'VRIN BAG3' },
+    { src: Vrin3dImageBag4, alt: 'VRIN BAG4' },
+    { src: Vrin3dImageBag5, alt: 'VRIN BAG5' },
+    { src: Vrin3dImageBag6, alt: 'VRIN BAG6' },
+    { src: Vrin3dImageBag7, alt: 'VRIN BAG7' },
+    { src: Vrin3dImageBag8, alt: 'VRIN BAG8' },
+    { src: Vrin3dImageBag9, alt: 'VRIN BAG9' },
+    { src: Vrin3dImageBag10, alt: 'VRIN BAG10' },
   ];
-
-  useInterval(() => {
-    setActiveImageIndex((prevIndex) => (prevIndex + 1) % 10);
-  }, 1000);
 
   return (
     <main className={styles.home}>
@@ -255,17 +250,11 @@ export default function Home() {
                 width={506}
                 loading="lazy"
               />
-              {activeImageSources.map((src, index) => (
-                <Image
-                  key={index}
-                  className={styles.home__section5__content__boxes__item__image__bag__hover}
-                  style={{ opacity: index === activeImageIndex ? 1 : 0 }}
-                  src={src}
-                  alt={`VRIN BAG${index + 1}`}
-                  width={578}
-                  loading="lazy"
-                />
-              ))}
+              <ImageSlider
+                imageList={activeImageSources}
+                imageClassName={styles.home__section5__content__boxes__item__image__bag__hover}
+                width={578}
+              />
             </div>
           </div>
         </div>
