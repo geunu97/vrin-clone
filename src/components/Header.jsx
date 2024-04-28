@@ -8,21 +8,17 @@ import ArrowTopSvg from '@/assets/svg/ArrowTop';
 import MenuSvg from '@/assets/svg/Menu';
 import CloseSvg from '@/assets/svg/Close';
 import ModalSelect from '@/components/ModalSelect';
+import useScrollTrigger from '@/hooks/useScrollTrigger';
 
 const Header = () => {
   const router = useRouter();
   const { t, i18n } = useTranslation('common');
+  const isScrolled = useScrollTrigger(540);
   const [isOpenLanguageModal, setIsOpenLanguageModal] = useState(false);
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
   const languages = [
-    {
-      label: 'KOR',
-      value: 'ko',
-    },
-    {
-      label: 'ENG',
-      value: 'en',
-    },
+    { label: 'KOR', value: 'ko' },
+    { label: 'ENG', value: 'en' },
   ];
 
   const handleLanguageChange = (newLanguage) => {
@@ -32,7 +28,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={styles.header}>
+      <div className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
         <div className={styles.header__inner}>
           <div className={styles.header__inner__logo}>
             <Link href="/">
@@ -70,6 +66,10 @@ const Header = () => {
               <Link href="/register">{t('sentence.start_for_free')}</Link>
             </li>
           </ul>
+          <div className={styles.header__inner__scroll__menu}>
+            <span className={styles.header__inner__scroll__menu__text}>{t('sentence.want_to_use_vrin_3d')}</span>
+            <Link href="/register">{t('sentence.start_for_free')}</Link>
+          </div>
         </div>
       </div>
 

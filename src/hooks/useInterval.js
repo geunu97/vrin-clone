@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-function useInterval(callback, delay) {
+/* delay 간격으로 콜백 함수를 반복적으로 실행하는 훅 */
+const useInterval = (callback, delay) => {
   const savedCallback = useRef();
 
   useEffect(() => {
@@ -16,6 +17,6 @@ function useInterval(callback, delay) {
       return () => clearInterval(id);
     }
   }, [delay]);
-}
+};
 
 export default useInterval;
