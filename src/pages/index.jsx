@@ -14,6 +14,10 @@ import ArrowTopRightSvg from '@/assets/svg/ArrowTopRight';
 import ArrowTopRightOutwardSvg from '@/assets/svg/ArrowTopRightOutward';
 import ArrowLeftSvg from '@/assets/svg/ArrowLeft';
 import ArrowRightSvg from '@/assets/svg/ArrowRight';
+import CameraSvg from '@/assets/svg/Camera';
+import DotSvg from '@/assets/svg/dot';
+import CubeHighlightSvg from '@/assets/svg/CubeHighlight';
+import StarHighlightSvg from '@/assets/svg/StarHighlight';
 import Vrin3dImage from '@/assets/images/home_C-1_PC_ko-093e56a1.png';
 import Vrin3dImagePhone from '@/assets/images/home_C-3_PC-52386fbc.png';
 import Vrin3dImagePhone2 from '@/assets/images/home_D-1_PC-0b362984.png';
@@ -84,14 +88,23 @@ const Home = () => {
             <Video src="/assets/videos/home_content_1_PC-3cb3a75d.mp4" />
           </div>
           <div className={styles.home__section1__content}>
-            <p
-              className={styles.home__section1__content__title}
-              dangerouslySetInnerHTML={{ __html: t('sentence.mobile_based_easy_3d_scanning') }}
-            />
-            <p
-              className={styles.home__section1__content__description}
-              dangerouslySetInnerHTML={{ __html: t('sentence.studio_free_3d_scanning') }}
-            />
+            <div className={styles.home__section1__content__inner}>
+              <div className={styles.home__section1__content__inner__images}>
+                <CameraSvg color="#5D6CFA" />
+                <DotSvg color="#BDC1C7" />
+                <DotSvg color="#BDC1C7" />
+              </div>
+              <div className={styles.home__section1__content__inner__text}>
+                <p
+                  className={styles.home__section1__content__inner__text__title}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.mobile_based_easy_3d_scanning') }}
+                />
+                <p
+                  className={styles.home__section1__content__inner__text__description}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.studio_free_3d_scanning') }}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.home__section2}>
@@ -99,14 +112,23 @@ const Home = () => {
             <Video src="/assets/videos/home_content_2_PC-c0a5dbbe.mp4" />
           </div>
           <div className={styles.home__section2__content}>
-            <p
-              className={styles.home__section2__content__title}
-              dangerouslySetInnerHTML={{ __html: t('sentence.fast_realistic_ai_technology') }}
-            />
-            <p
-              className={styles.home__section2__content__description}
-              dangerouslySetInnerHTML={{ __html: t('sentence.create_3d_models') }}
-            />
+            <div className={styles.home__section2__content__inner}>
+              <div className={styles.home__section2__content__inner__images}>
+                <DotSvg color="#BDC1C7" />
+                <CubeHighlightSvg color="#5D6CFA" />
+                <DotSvg color="#BDC1C7" />
+              </div>
+              <div className={styles.home__section2__content__inner__text}>
+                <p
+                  className={styles.home__section2__content__inner__text__title}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.fast_realistic_ai_technology') }}
+                />
+                <p
+                  className={styles.home__section2__content__inner__text__description}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.create_3d_models') }}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.home__section3}>
@@ -114,14 +136,23 @@ const Home = () => {
             <Video src="/assets/videos/home_content_3_PC-706ebb88.mp4" />
           </div>
           <div className={styles.home__section3__content}>
-            <p
-              className={styles.home__section3__content__title}
-              dangerouslySetInnerHTML={{ __html: t('sentence.easy_editing_and_various_applications') }}
-            />
-            <p
-              className={styles.home__section3__content__description}
-              dangerouslySetInnerHTML={{ __html: t('sentence.start_with_vrin_3d') }}
-            />
+            <div className={styles.home__section3__content__inner}>
+              <div className={styles.home__section3__content__inner__images}>
+                <DotSvg color="#BDC1C7" />
+                <DotSvg color="#BDC1C7" />
+                <StarHighlightSvg color="rgb(68, 74, 232)" />
+              </div>
+              <div className={styles.home__section3__content__inner__text}>
+                <p
+                  className={styles.home__section3__content__inner__text__title}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.easy_editing_and_various_applications') }}
+                />
+                <p
+                  className={styles.home__section3__content__inner__text__description}
+                  dangerouslySetInnerHTML={{ __html: t('sentence.start_with_vrin_3d') }}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.home__section4}>
