@@ -170,7 +170,7 @@ const Home = () => {
               dangerouslySetInnerHTML={{ __html: t('sentence.efficient_content_creation') }}
             />
             <div className={styles.home__section4__content__box}>
-              <div className={styles.home__section4__content__box__item}>
+              <div className={`${styles.home__section4__content__box__item} ${styles.item1}`}>
                 <div className={styles.home__section4__content__box__item__header}>
                   <span className={styles.home__section4__content__box__item__header__number}>80%</span>
                   <ArrowDownSvg color="#3737CC" />
@@ -184,7 +184,7 @@ const Home = () => {
                   dangerouslySetInnerHTML={{ __html: t('sentence.standard_3d_scanner') }}
                 />
               </div>
-              <div className={styles.home__section4__content__box__item}>
+              <div className={`${styles.home__section4__content__box__item} ${styles.item2}`}>
                 <div className={styles.home__section4__content__box__item__header}>
                   <span className={styles.home__section4__content__box__item__header__number}>4H</span>
                   <ArrowDownSvg color="#3737CC" />
@@ -198,7 +198,7 @@ const Home = () => {
                   dangerouslySetInnerHTML={{ __html: t('sentence.modeler_working_time') }}
                 />
               </div>
-              <div className={`${styles.home__section4__content__box__item} ${styles.creation_cost_reduction}`}>
+              <div className={`${styles.home__section4__content__box__item} ${styles.item3} ${styles.creation_cost_reduction}`}>
                 <div className={styles.home__section4__content__box__item__header}>
                   <span className={styles.home__section4__content__box__item__header__number}>90%</span>
                   <ArrowDownSvg color="#3737CC" />

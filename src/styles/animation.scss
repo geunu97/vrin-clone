@@ -1,0 +1,9 @@
+@keyframes easeinout {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0); // y축 방향으로 50픽셀만큼 이동, x축과 z축으로는 이동하지 않는다. (수직으로만 50픽셀 위로 올라가는 효과)
+  }
+  100% {
+    opacity: 1;
+  }
+}

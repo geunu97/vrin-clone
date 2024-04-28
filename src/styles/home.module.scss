@@ -1,3 +1,5 @@
+@import '@/styles/animation.scss';
+
 .home {
   &__section0 {
     background-color: rgb(5, 7, 14);
@@ -162,6 +164,16 @@
           display: flex;
           flex-direction: column;
           gap: 12px;
+          opacity: 0;
+          &.item1 {
+            animation: 1s ease-in-out 0s 1 normal forwards easeinout; // 지속시간: 1초, 속도변화: 서서히 속도 변화, 시작대기시간: 0초, 반복: 1회, 방향: 정방향, 애니메이션 완료 후 마지막 스타일 유지, 애니메이션 이름: easeinout
+          }
+          &.item2 {
+            animation: 1s ease-in-out 0.5s 1 normal forwards easeinout;
+          }
+          &.item3 {
+            animation: 1s ease-in-out 1s 1 normal forwards easeinout;
+          }
           &__header {
             display: flex;
             flex-direction: row;
